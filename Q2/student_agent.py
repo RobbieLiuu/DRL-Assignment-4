@@ -24,7 +24,7 @@ class Agent(object):
         self.obs_dim = 5  # CartPole observation: [x, theta, x_dot, theta_dot, time]
         self.act_dim = 1
         self.actor = Actor(self.obs_dim, self.act_dim)
-        self.actor.load_state_dict(torch.load("best_actor.pth", map_location=torch.device("cpu")))
+        self.actor.load_state_dict(torch.load("893_actor.pth", map_location=torch.device("cpu")))
         self.actor.eval()
 
     def act(self, observation):
